@@ -29,7 +29,7 @@ export default function App() {
           <Navbar />
 
           {/* Main Content Area */}
-          <main className="flex-1 pb-16 md:pb-0">
+          <main className="flex-1 pb-24 md:pb-6">
             <Routes>
               <Route path="/" element={<LandingPage />} />
               <Route path="/dashboard" element={<HomeDashboard />} />

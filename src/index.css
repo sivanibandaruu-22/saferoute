@@ -19,6 +19,17 @@ body {
   background-color: var(--color-alabaster);
   color: var(--color-stone-text);
   font-family: 'Plus Jakarta Sans', 'Inter', system-ui, -apple-system, sans-serif;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+}
+
+/* Mobile Safe Area Insets for iPhones and gesture bars */
+.safe-area-bottom {
+  padding-bottom: max(0.5rem, env(safe-area-inset-bottom, 0.5rem));
+}
+
+.safe-area-top {
+  padding-top: max(0.5rem, env(safe-area-inset-top, 0.5rem));
 }
 
 /* Custom Leaflet Map Adjustments */
@@ -28,6 +39,7 @@ body {
   z-index: 10;
   font-family: inherit;
   background-color: #f7f6f2;
+  touch-action: pan-x pan-y;
 }
 
 /* Custom Marker Pulsing Animation for Live Location */
