@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import { HashRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { AppProvider } from './context/AppContext';
 import Navbar from './components/Navbar';
 import MobileNavigation from './components/MobileNavigation';
@@ -23,7 +23,7 @@ import Settings from './pages/Settings';
 export default function App() {
   return (
     <AppProvider>
-      <BrowserRouter>
+      <HashRouter>
         <div className="min-h-screen flex flex-col bg-[#FBFBF9] text-stone-900 antialiased selection:bg-rose-900 selection:text-white">
           {/* Top Navigation Bar */}
           <Navbar />
@@ -54,7 +54,7 @@ export default function App() {
           {/* In-App Toast Alert Queue */}
           <ToastContainer />
         </div>
-      </BrowserRouter>
+      </HashRouter>
     </AppProvider>
   );
 }
